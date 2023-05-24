@@ -1,0 +1,16 @@
+Icons for knitting app
+
+home
+<a href="https://www.flaticon.com/free-icons/yarn" title="yarn icons">Yarn icons created by iconixar - Flaticon</a>
+
+counter
+<a href="https://www.flaticon.com/free-icons/row-counter" title="row counter icons">Row counter icons created by Freepik - Flaticon</a>
+
+counter reps
+<a href="https://www.flaticon.com/free-icons/row-counter" title="row counter icons">Row counter icons created by Freepik - Flaticon</a>
+
+decrease
+<a href="https://www.flaticon.com/free-icons/minus" title="minus icons">Minus icons created by Freepik - Flaticon</a>
+
+increase
+<a href="https://www.flaticon.com/free-icons/add" title="add icons">Add icons created by Freepik - Flaticon</a>

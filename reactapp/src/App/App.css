@@ -1,9 +1,10 @@
-.app{
-    display: flex;
+h2{
+    text-align: center;
+    margin-top: 30px;
 }
 
 .navbar{
-    background: rgb(5, 68, 104);
+    background: #ec918e;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +17,7 @@
 .navbar ul li a{
     display: block;
     padding: 13px 30px;
-    border-bottom: 1px solid #10558d;
+    border-bottom: 1px solid #57c6d7;
     color: rgb(241, 237, 237);
     font-size: 16px;
     position: relative;
@@ -30,9 +31,9 @@
 
 .navbar ul li a:hover,
 .navbar ul li a.active{
-    color: #0c7db1;
+    color: #57c6d7;
     background: white;
-    border-right: 2px solid rgb(5, 68, 104);
+    border-right: 2px solid #57c6d7;
 }
 
 .navbar ul li a:hover .icon,
@@ -43,4 +44,9 @@
 .navbar ul li a:hover:before,
 .navbar ul li a.active:before{
     display: block;
+}
+
+.description{
+    margin-top: 30px;
+    margin-left: 340px
 }
