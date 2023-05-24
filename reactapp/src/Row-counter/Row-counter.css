@@ -1,0 +1,12 @@
+.container{
+    margin-left: 340px;
+}
+
+#count{
+    text-align: center;
+}
+
+button{
+    height: 40px;
+    width: 40px;
+}
