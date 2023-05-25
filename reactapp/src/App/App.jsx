@@ -25,7 +25,7 @@ export function App(){
 
     return(
         <div className='app'>
-            <h2>Choose a tool from the navbar</h2>
+
             <div className='navbar'>
                 <ul>
                     <li>
