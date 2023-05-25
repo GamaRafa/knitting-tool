@@ -7,7 +7,7 @@ export function RowCounter(){
 
     return(
         <div className='container'>
-        <h2>Row counter</h2>
+            <h2>Row counter</h2>
             <div id="count">{count}</div>
             <div id="buttons">
                 <button id="plus" onClick={() => setCount(count + 1)}>+</button>

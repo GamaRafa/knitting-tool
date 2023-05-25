@@ -3,6 +3,7 @@ import './App.css'
 
 import { Home } from '../Home/Home.jsx'
 import { RowCounter } from '../Row-counter/Row-counter.jsx'
+import { Decrease } from '../Decrease/Decrease.jsx'
 
 import fabric from '../icons/fabric.png'
 import minus from '../icons/minus.png'
@@ -11,16 +12,25 @@ import row_counter from '../icons/row-counter.png'
 import row_rep from '../icons/row-rep.png'
 
 export function App(){
-    const [ showHome, setShowHome ] = useState(false)
+    const [ showHome, setShowHome ] = useState(true)
     const [ showCounter, setShowCounter] = useState(false)
+    const [ showDecrease, setShowDecrease ] = useState(false)
 
     const handleClickHome = () => {
         setShowHome(true)
         setShowCounter(false)
+        setShowDecrease(false)
     }
     const handleClickCounter = () => {
         setShowHome(false)
         setShowCounter(true)
+        setShowDecrease(false)
+    }
+
+    const handleClickDecrease = () => {
+        setShowHome(false)
+        setShowCounter(false)
+        setShowDecrease(true)
     }
 
     return(
@@ -53,7 +63,7 @@ export function App(){
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a onClick={handleClickDecrease} href="#">
                             <span className='icon'><img src={minus} alt="" /></span>
                             <span>Decrease calculator</span>
                         </a>
@@ -63,6 +73,7 @@ export function App(){
             <div className='content'>
                 {showHome && <Home />}
                 {showCounter && <RowCounter />}
+                {showDecrease && <Decrease />}
             </div>
         </div>
     )

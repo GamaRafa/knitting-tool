@@ -1,0 +1,19 @@
+.container{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#divTotal, #divDecrease, #divbtn, #instructions{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    font-size: 20px;
+    width: 100px;
+}
+
+.label{
+    margin-right: 10px;
+}
