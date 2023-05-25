@@ -8,15 +8,17 @@ h2{
     position: fixed;
     top: 0;
     left: 0;
-    width: 310px;
+    width: 250px;
     height: 100%;
     padding: 20px 0;
     transition: all 0.5s ease;
 }
 
 .navbar ul li a{
-    display: block;
-    padding: 13px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    padding: 15px 30px;
     border-bottom: 1px solid #57c6d7;
     color: rgb(241, 237, 237);
     font-size: 16px;
@@ -27,21 +29,19 @@ h2{
     color: #dee4ec;
     width: 30px;
     display: inline-block;
+    margin-right: 10px;
 }
 
-.navbar ul li a:hover,
-.navbar ul li a.active{
+.navbar ul li a:hover{
     color: #57c6d7;
     background: white;
     border-right: 2px solid #57c6d7;
 }
 
-.navbar ul li a:hover .icon,
-.navbar ul li a.active .icon{
+.navbar ul li a:hover .icon{
     color: #0c7db1;
 }
 
-.navbar ul li a:hover:before,
-.navbar ul li a.active:before{
+.navbar ul li a:hover:before{
     display: block;
 }

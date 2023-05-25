@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 import { Home } from '../Home/Home.jsx'
@@ -11,6 +11,17 @@ import row_counter from '../icons/row-counter.png'
 import row_rep from '../icons/row-rep.png'
 
 export function App(){
+    const [ showHome, setShowHome ] = useState(false)
+    const [ showCounter, setShowCounter] = useState(false)
+
+    const handleClickHome = () => {
+        setShowHome(true)
+        setShowCounter(false)
+    }
+    const handleClickCounter = () => {
+        setShowHome(false)
+        setShowCounter(true)
+    }
 
     return(
         <div className='app'>
@@ -18,13 +29,13 @@ export function App(){
             <div className='navbar'>
                 <ul>
                     <li>
-                        <a href='#' className='active'>
+                        <a onClick={handleClickHome} href='#'>
                             <span className='icon'><img src={fabric} alt="" /></span>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a onClick={handleClickCounter} href='#'>
                             <span className='icon'><img src={row_counter} alt="" /></span>
                             <span>Row counter</span>
                         </a>
@@ -32,17 +43,17 @@ export function App(){
                     <li>
                         <a href='#'>
                             <span className='icon'><img src={row_rep} alt="" /></span>
-                            <span>Row counter with repetitions</span>
+                            <span>Repetitions counter</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             <span className='icon'><img src={plus} alt="" /></span>
                             <span>Increase calculator</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             <span className='icon'><img src={minus} alt="" /></span>
                             <span>Decrease calculator</span>
                         </a>
@@ -50,7 +61,8 @@ export function App(){
                 </ul>
             </div>
             <div className='content'>
-                <RowCounter />
+                {showHome && <Home />}
+                {showCounter && <RowCounter />}
             </div>
         </div>
     )
