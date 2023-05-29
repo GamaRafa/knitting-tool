@@ -1,0 +1,44 @@
+.container{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#count{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+#rows-rep{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#buttons{
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 15px;
+    background: #ec918e;
+    color: rgb(241, 237, 237);
+    font-size: 22px;
+}
+
+.input{
+    font-size: 20px;
+    width: 100px;
+}
+
+.label{
+    margin-right: 10px;
+}

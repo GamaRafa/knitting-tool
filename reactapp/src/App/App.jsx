@@ -3,6 +3,7 @@ import './App.css'
 
 import { Home } from '../Home/Home.jsx'
 import { RowCounter } from '../Row-counter/Row-counter.jsx'
+import { RowRep } from '../Row-rep/Row-rep'
 import { Decrease } from '../Decrease/Decrease.jsx'
 
 import fabric from '../icons/fabric.png'
@@ -15,22 +16,33 @@ export function App(){
     const [ showHome, setShowHome ] = useState(true)
     const [ showCounter, setShowCounter] = useState(false)
     const [ showDecrease, setShowDecrease ] = useState(false)
+    const [ showRowRep, setShowRowRep ] = useState(false)
 
     const handleClickHome = () => {
         setShowHome(true)
         setShowCounter(false)
         setShowDecrease(false)
+        setShowRowRep(false)
     }
     const handleClickCounter = () => {
         setShowHome(false)
         setShowCounter(true)
         setShowDecrease(false)
+        setShowRowRep(false)
     }
 
     const handleClickDecrease = () => {
         setShowHome(false)
         setShowCounter(false)
         setShowDecrease(true)
+        setShowRowRep(false)
+    }
+
+    const handleClickRowRep = () => {
+        setShowHome(false)
+        setShowCounter(false)
+        setShowDecrease(false)
+        setShowRowRep(true)
     }
 
     return(
@@ -51,7 +63,7 @@ export function App(){
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a onClick={handleClickRowRep} href='#'>
                             <span className='icon'><img src={row_rep} alt="" /></span>
                             <span>Repetitions counter</span>
                         </a>
@@ -73,6 +85,7 @@ export function App(){
             <div className='content'>
                 {showHome && <Home />}
                 {showCounter && <RowCounter />}
+                {showRowRep && <RowRep />}
                 {showDecrease && <Decrease />}
             </div>
         </div>
